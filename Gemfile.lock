@@ -199,7 +199,7 @@ GEM
       database_cleaner-core (~> 2.0)
     database_cleaner-core (2.0.1)
     date (3.5.1)
-    debug (1.11.0)
+    debug (1.11.1)
       irb (~> 1.10)
       reline (>= 0.3.8)
     devise (4.9.4)
@@ -567,7 +567,7 @@ GEM
       i18n
     rbs (3.9.5)
       logger
-    rdoc (7.0.2)
+    rdoc (7.0.3)
       erb
       psych (>= 4.0.0)
       tsort
