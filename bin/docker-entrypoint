@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e
+
+# If running the rails server then create or migrate existing database
+if [ "${1}" == "bundle" ] && [ "${2}" == "exec" ] && [ "${3}" == "rails" ] && [ "${4}" == "server" ]; then
+  AUTO_ACCEPT=1 bundle exec rails db:prepare
+fi
+
+exec "${@}"
