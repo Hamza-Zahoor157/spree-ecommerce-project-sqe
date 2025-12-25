@@ -61,8 +61,8 @@ Rails.application.configure do
     config.cache_store = :memory_store
   end
 
-  # Replace the default in-process and non-durable queuing backend for Active Job.
-  config.active_job.queue_adapter = :sidekiq
+  # Use Sidekiq when a worker is available; fall back to inline for free deployments.
+  config.active_job.queue_adapter = ENV['DISABLE_WORKER'].present? ? :inline : :sidekiq
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
